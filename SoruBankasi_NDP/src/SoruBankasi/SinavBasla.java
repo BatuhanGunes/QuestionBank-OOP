@@ -39,37 +39,37 @@ public class SinavBasla extends Sorular{
 	
 	
 	public static void BaslamadanOnce(){
-		System.out.println("Sýnav Adini Giriniz : ");
+		System.out.println("Sinav Adini Giriniz : ");
 		SinavAdi = input.nextLine();
-		System.out.println("Gözetmen Adýný Giriniz : ");
+		System.out.println("Gözetmen Adini Giriniz : ");
 		GozetmenAdi = input.nextLine();
-		System.out.println("Sýnav Yerini Giriniz : ");
+		System.out.println("Sinav Yerini Giriniz : ");
 		SinavYeri = input.nextLine();
-		System.out.println("Sýnavýn Katagorisini Giriniz . ");
+		System.out.println("Sinavin Katagorisini Giriniz . ");
 		Katagori = input.nextLine();
 		
 		System.out.println("Coktan secmeli soru sayisini giriniz : ");
 		CoktanSec_SoruSayisi = input.nextInt();
-		System.out.println("kolay - orta - zor sýralamasýyla kac adet olacagýný yazýnýz.");
+		System.out.println("kolay - orta - zor siralamasiyla kac adet olacagini yaziniz.");
 		CoktanSec_Kolay = input.nextInt();
 		CoktanSec_Orta = input.nextInt();
 		CoktanSec_Zor = input.nextInt();
 		
 		System.out.println("Dogru - Yanlis Soru sayisini giriniz : ");
 		DogruYanlis_SoruSayisi = input.nextInt();
-		System.out.println("kolay - orta - zor sýralamasýyla kac adet olacagýný yazýnýz.");
+		System.out.println("kolay - orta - zor siralamasiyla kac adet olacagini yaziniz.");
 		DogruYanlis_Kolay = input.nextInt();
 		DogruYanlis_Orta = input.nextInt();
 		DogruYanlis_Zor = input.nextInt();
 		
 		System.out.println("Bosluk doldurma soru sayisini giriniz : ");
 		BoslukDol_SoruSayisi = input.nextInt();
-		System.out.println("kolay - orta - zor sýralamasýyla kac adet olacagýný yazýnýz.");
+		System.out.println("kolay - orta - zor siralamasiyla kac adet olacagini yaziniz.");
 		Bosluk_Kolay = input.nextInt();
 		Bosluk_Orta = input.nextInt();
 		Bosluk_Zor = input.nextInt();
 		
-		System.out.println("----------Sýnava Baslamaya Hazýrsýnýz.------------");
+		System.out.println("----------Sinava Baslamaya Hazirsiniz.------------");
 		toplamSoruSayisi = CoktanSec_SoruSayisi + DogruYanlis_SoruSayisi + BoslukDol_SoruSayisi;
 		
 	}
@@ -149,7 +149,7 @@ public class SinavBasla extends Sorular{
 							SoruSayisi = SoruSayisi + 1;
 								CoktanSec_SoruSayisi = CoktanSec_SoruSayisi - 1;
 								ZorlukSayi = ZorlukSayi - 1;
-								System.out.print("Cevabýnýzý Giriniz : ");
+								System.out.print("Cevabinizi Giriniz : ");
 								String verilenCevap = input.next();
 								int verilenCevap_DogruMu = verilenCevap.compareTo(CoktanSecmeliSorular()[deger][7]);
 					            if (verilenCevap_DogruMu == 0){
@@ -172,7 +172,7 @@ public class SinavBasla extends Sorular{
 						SoruSayisi = SoruSayisi + 1;
 							DogruYanlis_SoruSayisi = DogruYanlis_SoruSayisi - 1;
 							ZorlukSayi = ZorlukSayi - 1;
-							System.out.print("Cevabýnýzý Giriniz : ");
+							System.out.print("Cevabinizi Giriniz : ");
 							String verilenCevap = input.next();
 							int verilenCevap_DogruMu = verilenCevap.compareTo(dogruYanlisSorular()[deger][5]);
 				            if (verilenCevap_DogruMu == 0){
@@ -195,7 +195,7 @@ public class SinavBasla extends Sorular{
 						SoruSayisi = SoruSayisi + 1;
 							BoslukDol_SoruSayisi = BoslukDol_SoruSayisi - 1;
 							ZorlukSayi = ZorlukSayi - 1;
-							System.out.print("Cevabýnýzý Giriniz : ");
+							System.out.print("Cevabinizi Giriniz : ");
 							String verilenCevap = input.next();
 							int verilenCevap_DogruMu = verilenCevap.compareTo(BoslukDoldurmaSorular()[deger][4]);
 				            if (verilenCevap_DogruMu == 0){
@@ -212,15 +212,15 @@ public class SinavBasla extends Sorular{
 		
 		
 		public static void SinavBitti(){
-			System.out.println("\n--------Tebrikler Sýnavý Bitirdiniz Sonuclarýnýz---------\n"
+			System.out.println("\n--------Tebrikler Sinavi Bitirdiniz Sonuclariniz---------\n"
 					+ "\nSinav Adi : " + SinavAdi
 						+ "\nGözetmen Adi : " + GozetmenAdi 
-							+ "\nSýnav Yeri : " + SinavYeri 
-								+ "\nSýnavýn Katagorisi : " + Katagori
+							+ "\nSinav Yeri : " + SinavYeri 
+								+ "\nSinavin Katagorisi : " + Katagori
 									+"\nToplam Soru Sayisi : " + toplamSoruSayisi
 										+ "\nDogru Cevap Sayiniz : " + dogruCevapSayisi 
-											+"\nYanlýs Cevap Sayiniz : " + (toplamSoruSayisi-dogruCevapSayisi)
-												+"\nToplam Puanýnýz : " + toplamPuan +"\n"
+											+"\nYanlis Cevap Sayiniz : " + (toplamSoruSayisi-dogruCevapSayisi)
+												+"\nToplam Puaniniz : " + toplamPuan +"\n"
 													+"\nAna Menuye yönlendiriliyorsunuz.\n");
 			
 			SinaviKaydet.Kaydet(SinavAdi + "_" + bicim.format(tarih) + ".dat");

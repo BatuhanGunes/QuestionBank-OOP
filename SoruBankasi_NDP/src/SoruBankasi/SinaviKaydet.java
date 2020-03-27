@@ -19,19 +19,19 @@ public class SinaviKaydet extends Sorular{
 		try{
 			
 			
-	File file = new File(DosyaAdi);
-	
-	FileOutputStream fos = new FileOutputStream(file);
-	BufferedOutputStream bos = new BufferedOutputStream(fos);
-	DataOutputStream das = new DataOutputStream(bos);	
+		File file = new File(DosyaAdi);
+		
+		FileOutputStream fos = new FileOutputStream(file);
+		BufferedOutputStream bos = new BufferedOutputStream(fos);
+		DataOutputStream das = new DataOutputStream(bos);	
     
 		file.createNewFile();
 		
 		das.writeUTF("Sinav Adi : " + SinavBasla.getSinavAdi());
 		das.writeUTF("Gozetmen Adi : " + SinavBasla.getGozetmenAdi());
 		das.writeUTF("Sinav Yeri : " + SinavBasla.getSinavYeri());
-		das.writeUTF("Sýnavýn Katagorisi : " + SinavBasla.getKatagori());
-		das.writeUTF("Sýrasýyla ToplamPuan - Coktan,DY,Bosluk soruSayilari - DogruCevapSayisi - Puan");
+		das.writeUTF("Sinavin Katagorisi : " + SinavBasla.getKatagori());
+		das.writeUTF("Sirasiyla ToplamPuan - Coktan,DY,Bosluk soruSayilari - DogruCevapSayisi - Puan");
 		das.writeInt(SinavBasla.getToplamSoruSayisi());
 		das.writeInt(SinavBasla.getCoktanSec_SoruSayisi());
 		das.writeInt(SinavBasla.getDogruYanlis_SoruSayisi());
@@ -39,10 +39,14 @@ public class SinaviKaydet extends Sorular{
 		das.writeInt(SinavBasla.getDogruCevapSayisi());
 		das.writeInt(SinavBasla.getToplamPuan());
 		
+		das.close();
+		bos.close();
+		fos.close();
 
 		}catch(Exception e){
 			System.out.println("Hata : " + e.getMessage());
-		}				
-	}
+		}
+		
 	
+	}	
 }

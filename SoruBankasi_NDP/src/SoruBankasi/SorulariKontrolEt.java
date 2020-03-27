@@ -101,7 +101,8 @@ public class SorulariKontrolEt extends Sorular{
 				}
 					das.close();
 					dis.close();
-					System.out.println("Cýkýs yapýldi.");
+					System.out.println("Cikis yapildi.");
+					System.exit(0);
 					
 		}catch(Exception e){
 			System.out.println("Hata : " + e.getMessage());

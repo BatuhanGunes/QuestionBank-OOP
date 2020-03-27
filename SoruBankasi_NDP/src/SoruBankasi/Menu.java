@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Menu {
 
 	private int menuNumarasi = 0;
-    private final int ANAMENU = 0, SORU_GORUNTULE = 1, BÝLGÝ_AL = 2, SORU_COZ = 3, SORU_DUZENLE = 4, CIKIS = 5;
+    private final int ANAMENU = 0, SORU_GORUNTULE = 1, BiLGi_AL = 2, SORU_COZ = 3, SORU_DUZENLE = 4, CIKIS = 5;
 
     Scanner input = new Scanner(System.in);
     
@@ -40,7 +40,7 @@ public class Menu {
             switch (menuNumarasi) {
                 case ANAMENU:         	menuYazdir();                           		break;
                 case SORU_GORUNTULE:  	GoruntuMenusuYazdir();   	menuYazdir();      	break;
-                case BÝLGÝ_AL:			BilgiAl();					menuYazdir();		break;
+                case BiLGi_AL:			BilgiAl();					menuYazdir();		break;
                 case SORU_COZ:      	soruYazdir();        		menuYazdir();     	break;
                 case SORU_DUZENLE:  	DuzenleMenusuYazdir();      menuYazdir();     	break;
                 case CIKIS:         	SorulariKontrolEt.KontrolEt();   				break;
